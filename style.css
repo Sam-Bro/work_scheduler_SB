@@ -1,0 +1,12 @@
+.header-class {
+    text-align: center;
+}
+.row-style {
+    border: 1px solid black;
+}
+.time-col {
+    border-right: 1px solid black;
+}
+.save-col {
+    border-left: 1px solid black;
+}
