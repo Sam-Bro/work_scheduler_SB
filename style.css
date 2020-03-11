@@ -10,3 +10,12 @@
 .save-col {
     border-left: 1px solid black;
 }
+.mid-textarea {
+    width: 100%;
+    height: 100%;
+}
+
+.col-lg-8 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
