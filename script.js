@@ -1,2 +1,2 @@
-var weather = moment().format();
-console.log(weather);
+var todaysDate = moment().format('MMMM Do YYYY');
+console.log(todaysDate);
