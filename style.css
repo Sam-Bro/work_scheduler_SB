@@ -20,3 +20,16 @@
     padding-left: 0px;
     padding-right: 0px;
 }
+.btn-save {
+    width: 100%;
+    height: 100%;
+}
+.text-future {
+    background-color: lightgreen;
+}
+.text-past {
+    background-color: grey;
+}
+.text-current {
+    background-color: lightblue;
+}
