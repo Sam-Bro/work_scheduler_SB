@@ -24,12 +24,12 @@
     width: 100%;
     height: 100%;
 }
-.text-future {
+.text-current {
     background-color: lightgreen !important;
 }
 .text-past {
-    background-color: grey;
+    background-color: grey !important;
 }
-.text-current {
+.text-future {
     background-color: lightblue;
 }

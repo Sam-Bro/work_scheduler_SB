@@ -27,13 +27,25 @@ console.log(moment().format('ha'));
 
 
 function hoursPassed() {
-   var currentHour = "text-" + (moment().format("ha"))
-   console.log(currentHour);
-   document.getElementById(currentHour).classList.add('text-future');
+   var currentHourCls = "text-" + (moment().format("ha"))
+   document.getElementById(currentHourCls).classList.add('text-current');
+   var currentHour = (moment().format("h"));
+
+   if (currentHour > 9 ) {
+      document.getElementById("text-9am").classList.add('text-past');
+   }
+   if (currentHour > 10 ) {
+      document.getElementById("text-10am").classList.add('text-past');
+   }
+   if (currentHour > 11 ) {
+      document.getElementById("text-11am").classList.add('text-past');
+   }
+
+   
 }
 hoursPassed()
 
-
+//save input to local
 function getTime() {
    var thisId = event.target.id;
    switch(thisId) {
