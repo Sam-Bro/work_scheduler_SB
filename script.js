@@ -21,46 +21,35 @@ printToday.textContent = todaysDate;
 
 //save button function 
 $(saveButton).on("click", function() {
-   getTime2()
+   getTime()
 })
+console.log(moment().format('ha'));
 
-function getTime2() {
-   thisId = event.target.id;
-   console.log(thisId);
-   console.log(inputText);
-    if (thisId === "btn-9am"){
-      console.log("save 9 am");
-      var inputText = document.getElementById("text-9am").value
-      localStorage.setItem("input9am", inputText);
 
-    } else if (thisId === "btn-10am"){
-       console.log("save 10 am");
-       var inputText = document.getElementById("text-10am").value
-       localStorage.setItem("input10am", inputText);
-    }else if (thisId === "btn-11am"){
-       console.log("save 11 am");
-       var inputText = document.getElementById("text-11am").value
-       localStorage.setItem("input11am", inputText);
-    } else {
-       console.log("didnt work");
-   }
+function hoursPassed() {
+   var currentHour = "text-" + (moment().format("ha"))
+   console.log(currentHour);
+   document.getElementById(currentHour).classList.add('text-future');
 }
+hoursPassed()
+
 
 function getTime() {
    var thisId = event.target.id;
-   var inputText = document.getElementById(thisId).value
-
    switch(thisId) {
    case "btn-9am":
       console.log(thisId);
+      var inputText = document.getElementById("text-9am").value
       localStorage.setItem("input9am", inputText);
       break;
    case "btn-10am":
       console.log(thisId);
+      var inputText = document.getElementById("text-10am").value
       localStorage.setItem("input10am", inputText);
       break;
    case "btn-11am":
       console.log(thisId);
+      var inputText = document.getElementById("text-11am").value
       localStorage.setItem("input11am", inputText);
       break;
    
@@ -68,11 +57,3 @@ function getTime() {
       console.log("didnt work");
       }
    }
-
-//getTime(test)
-
-//if(this.getAttribute('id')=="btn-9am"){
-//   console.log("somtejsdk");
-//}  else {
-//   console.log("didnt work");
-//}

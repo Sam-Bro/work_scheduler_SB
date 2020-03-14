@@ -25,7 +25,7 @@
     height: 100%;
 }
 .text-future {
-    background-color: lightgreen;
+    background-color: lightgreen !important;
 }
 .text-past {
     background-color: grey;
