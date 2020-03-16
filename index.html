@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Work Scheduler</title>
 </head>
+
 <body>
     <header class="jumbotron jumbotron-fluid header-class">
         <section class="container">
-          <h1 class="display-4">Work Day Scheduler</h1>
-          <p class="lead">A simple calendar application that allows the user to save events for each hour of the day.</p>
-          <p class="lead" id="todays-date"></p>
+            <h1 class="display-4">Work Day Scheduler</h1>
+            <p class="lead">A simple calendar application that allows the user to save events for each hour of the day.
+            </p>
+            <p class="lead" id="todays-date"></p>
         </section>
     </header>
-    
+
     <section class="container w-90" id="main-section">
-        <article class="row row-style" id="main-article">
+        <article class="row row-style">
             <!--9AM ROW-->
             <section class="col-sm-1 time-col">
                 <p>9:00AM</p>
@@ -26,9 +30,11 @@
                 <textarea class="mid-textarea text-future 9" id="text-9am"></textarea>
             </section>
             <section class="col-sm-1 save-col col-save">
-                <button type="button" class="btn btn-primary btn-save" id="btn-9am">Save</button>
+                <button type="button" class="btn btn-primary btn-save" id="btn-9am"><i class="fas fa-save"></i></button>
             </section>
-            <!--10AM ROW-->
+        </article>
+        <!--10AM ROW-->
+        <article class="row row-style">
             <section class="col-sm-1 time-col">
                 <p>10:00AM</p>
             </section>
@@ -36,9 +42,12 @@
                 <textarea class="mid-textarea text-future 10" id="text-10am"></textarea>
             </section>
             <section class="col-sm-1 save-col col-save">
-                <button type="button" class="btn btn-primary btn-save " id="btn-10am">Save</button>
+                <button type="button" class="btn btn-primary btn-save " id="btn-10am"><i
+                        class="fas fa-save"></i></button>
             </section>
-            <!--11AM ROW-->
+        </article>
+        <!--11AM ROW-->
+        <article class="row row-style">
             <section class="col-sm-1 time-col">
                 <p>11:00AM</p>
             </section>
@@ -46,19 +55,25 @@
                 <textarea class="mid-textarea text-future 11" id="text-11am"></textarea>
             </section>
             <section class="col-sm-1 save-col col-save">
-                <button type="button" class="btn btn-primary btn-save" id="btn-11am">Save</button>
+                <button type="button" class="btn btn-primary btn-save" id="btn-11am"><i
+                        class="fas fa-save"></i></button>
             </section>
-            <!--12PM ROW-->
+        </article>
+        <!--12PM ROW-->
+        <article class="row row-style">
             <section class="col-sm-1 time-col">
-                <p>12:00AM</p>
+                <p>12:00PM</p>
             </section>
             <section class="col-lg-10">
                 <textarea class="mid-textarea text-future 12" id="text-12pm"></textarea>
             </section>
             <section class="col-sm-1 save-col col-save">
-                <button type="button" class="btn btn-primary btn-save" id="btn-12pm">Save</button>
+                <button type="button" class="btn btn-primary btn-save" id="btn-12pm"><i
+                        class="fas fa-save"></i></button>
             </section>
-            <!--1PM ROW-->
+        </article>
+        <!--1PM ROW-->
+        <article class="row row-style">
             <section class="col-sm-1 time-col">
                 <p>1:00PM</p>
             </section>
@@ -66,9 +81,11 @@
                 <textarea class="mid-textarea text-future 1" id="text-1pm"></textarea>
             </section>
             <section class="col-sm-1 save-col col-save">
-                <button type="button" class="btn btn-primary btn-save" id="btn-1pm">Save</button>
+                <button type="button" class="btn btn-primary btn-save" id="btn-1pm"><i class="fas fa-save"></i></button>
             </section>
-            <!--2PM ROW-->
+        </article>
+        <!--2PM ROW-->
+        <article class="row row-style">
             <section class="col-sm-1 time-col">
                 <p>2:00PM</p>
             </section>
@@ -76,9 +93,11 @@
                 <textarea class="mid-textarea text-future 2" id="text-2pm"></textarea>
             </section>
             <section class="col-sm-1 save-col col-save">
-                <button type="button" class="btn btn-primary btn-save" id="btn-2pm">Save</button>
+                <button type="button" class="btn btn-primary btn-save" id="btn-2pm"><i class="fas fa-save"></i></button>
             </section>
-            <!--3PM ROW-->
+        </article>
+        <!--3PM ROW-->
+        <article class="row row-style">
             <section class="col-sm-1 time-col">
                 <p>3:00PM</p>
             </section>
@@ -86,9 +105,11 @@
                 <textarea class="mid-textarea text-future 3" id="text-3pm"></textarea>
             </section>
             <section class="col-sm-1 save-col col-save">
-                <button type="button" class="btn btn-primary btn-save" id="btn-3pm">Save</button>
+                <button type="button" class="btn btn-primary btn-save" id="btn-3pm"><i class="fas fa-save"></i></button>
             </section>
-            <!--4PM ROW-->
+        </article>
+        <!--4PM ROW-->
+        <article class="row row-style">
             <section class="col-sm-1 time-col">
                 <p>4:00PM</p>
             </section>
@@ -96,9 +117,11 @@
                 <textarea class="mid-textarea text-future 4" id="text-4pm"></textarea>
             </section>
             <section class="col-sm-1 save-col col-save">
-                <button type="button" class="btn btn-primary btn-save" id="btn-4pm">Save</button>
+                <button type="button" class="btn btn-primary btn-save" id="btn-4pm"><i class="fas fa-save"></i></button>
             </section>
-            <!--5PM ROW-->
+        </article>
+        <!--5PM ROW-->
+        <article class="row row-style">
             <section class="col-sm-1 time-col">
                 <p>5:00PM</p>
             </section>
@@ -106,13 +129,15 @@
                 <textarea class="mid-textarea text-future 5" id="text-5pm"></textarea>
             </section>
             <section class="col-sm-1 save-col col-save">
-                <button type="button" class="btn btn-primary btn-save" id="btn-5pm">Save</button>
+                <button type="button" class="btn btn-primary btn-save" id="btn-5pm"><i class="fas fa-save"></i></button>
             </section>
         </article>
 
     </section>
+    <script src="https://kit.fontawesome.com/c1ef408909.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="Moment/moment.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

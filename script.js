@@ -1,42 +1,43 @@
 var printToday = document.getElementById("todays-date");
 const saveButton = document.getElementsByClassName("btn-save");
 
+//get todays date with moment.js
+var todaysDate = moment().format('MMMM Do YYYY');
+var todaysDatePrint = moment().format('MMMM Do YYYY, h:mm a');
+console.log(todaysDate);
+
+currentDayCheck()
 
 //retrieve stored local text
 var nineStored = localStorage.getItem("input9am");
-document.getElementById("text-9am").value = nineStored
+$("#text-9am").val(nineStored)
 
 var tenStored = localStorage.getItem("input10am");
-document.getElementById("text-10am").value = tenStored
+$("#text-10am").val(tenStored)
 
-var tenStored = localStorage.getItem("input11am");
-document.getElementById("text-11am").value = tenStored
+var elevenStored = localStorage.getItem("input11am");
+$("#text-11am").val(elevenStored)
 
-var tenStored = localStorage.getItem("input12pm");
-document.getElementById("text-12pm").value = tenStored
+var twelveStored = localStorage.getItem("input12pm");
+$("#text-12pm").val(twelveStored)
 
-var tenStored = localStorage.getItem("input1pm");
-document.getElementById("text-1pm").value = tenStored
+var oneStored = localStorage.getItem("input1pm");
+$("#text-1pm").val(oneStored)
 
-var tenStored = localStorage.getItem("input2pm");
-document.getElementById("text-2pm").value = tenStored
+var twoStored = localStorage.getItem("input2pm");
+$("#text-2pm").val(twoStored)
 
-var tenStored = localStorage.getItem("input3pm");
-document.getElementById("text-3pm").value = tenStored
+var threeStored = localStorage.getItem("input3pm");
+$("#text-3pm").val(threeStored)
 
-var tenStored = localStorage.getItem("input4pm");
-document.getElementById("text-4pm").value = tenStored
+var fourStored = localStorage.getItem("input4pm");
+$("#text-4pm").val(fourStored)
 
-var tenStored = localStorage.getItem("input5pm");
-document.getElementById("text-5pm").value = tenStored
-
-
-//get todays date with moment.js
-var todaysDate = moment().format('MMMM Do YYYY');
-console.log(todaysDate);
+var fiveStored = localStorage.getItem("input5pm");
+$("#text-5pm").val(fiveStored)
 
 // print todays date to header 
-printToday.textContent = todaysDate;
+printToday.textContent = todaysDatePrint;
 
 //save button function 
 $(saveButton).on("click", function () {
@@ -44,41 +45,57 @@ $(saveButton).on("click", function () {
 })
 console.log(moment().format('HH'));
 
+// clear on new day
+//localStorage.setItem("storedDate", todaysDate)
+function currentDayCheck() {
+   var storedDay = localStorage.getItem("storedDate")
+   if (todaysDate === storedDay) {
+      console.log("same day");
+      return;
+   } else {
+      localStorage.clear()
+      localStorage.setItem("storedDate", todaysDate)
+      console.log("different day");
+   }
+}
+
 
 function hoursPassed() {
-   var currentHourCls = "text-" + (moment().format("ha"))
-   document.getElementById(currentHourCls).classList.add('text-current');
    var currentHour = (moment().format("HH"));
+   var currentHourCls = "text-" + (moment().format("ha"))
 
-   if (currentHour > 9) {
-      document.getElementById("text-9am").classList.add('text-past');
+   if (currentHour < 18 && currentHour > 9) {
+   document.getElementById(currentHourCls).classList.add('text-current');
+      if (currentHour > 9) {
+         $("#text-9am").addClass('text-past');
+      }
+      if (currentHour > 10) {
+         $("#text-10am").addClass('text-past');
+      }
+      if (currentHour > 11) {
+         $("#text-11am").addClass('text-past');
+      }
+      if (currentHour > 12) {
+         $("#text-12pm").addClass('text-past');
+      }
+      if (currentHour > 13) {
+         $("#text-1pm").addClass('text-past');
+      }
+      if (currentHour > 14) {
+         $("#text-2pm").addClass('text-past');
+      }
+      if (currentHour > 15) {
+         $("#text-3pm").addClass('text-past');
+      }
+      if (currentHour > 16) {
+         $("#text-4pm").addClass('text-past');
+      }
+      if (currentHour > 17) {
+         $("#text-5pm").addClass('text-past');
+      }
+   } else {
+      $(".mid-textarea").addClass('text-past');
    }
-   if (currentHour > 10) {
-      document.getElementById("text-10am").classList.add('text-past');
-   }
-   if (currentHour > 11) {
-      document.getElementById("text-11am").classList.add('text-past');
-   }
-   if (currentHour > 12) {
-      document.getElementById("text-12pm").classList.add('text-past');
-   }
-   if (currentHour > 13) {
-      document.getElementById("text-1pm").classList.add('text-past');
-   }
-   if (currentHour > 14) {
-      document.getElementById("text-2pm").classList.add('text-past');
-   }
-   if (currentHour > 15) {
-      document.getElementById("text-3pm").classList.add('text-past');
-   }
-   if (currentHour > 16) {
-      document.getElementById("text-4pm").classList.add('text-past');
-   }
-   if (currentHour > 17) {
-      document.getElementById("text-5pm").classList.add('text-past');
-   }
-
-
 }
 hoursPassed()
 

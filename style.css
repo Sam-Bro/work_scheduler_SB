@@ -1,8 +1,14 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
 .header-class {
     text-align: center;
 }
 .row-style {
     border: 1px solid black;
+    padding-top: 2px;
 }
 .time-col {
     border-right: 1px solid black;
@@ -32,4 +38,8 @@
 }
 .text-future {
     background-color: lightblue;
+}
+i {
+    color: white;
+    font-size: 24px;
 }
