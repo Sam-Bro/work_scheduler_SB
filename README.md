@@ -5,7 +5,7 @@
 Unit 05 Third-Party APIs, creating a day planner. using the moment.js library to create a day planner with hour blocks which can be edited and saved.
 
 
-A personal portfolio has been recreated using Bootstrap CSS framework to improve site quality and responsiveness, using the following guidlines:
+A personal day planner has been recreated utilising the moment.js API and JQuery, using the following guidlines:
 
 * The current day is displayed at the top of the calendar 
 
