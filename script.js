@@ -65,7 +65,7 @@ function hoursPassed() {
    var currentHourCls = "text-" + (moment().format("ha"))
 
    if (currentHour < 18 && currentHour > 9) {
-   document.getElementById(currentHourCls).classList.add('text-current');
+      document.getElementById(currentHourCls).classList.add('text-current');
       if (currentHour > 9) {
          $("#text-9am").addClass('text-past');
       }
@@ -105,47 +105,47 @@ function getTime() {
    switch (thisId) {
       case "btn-9am":
          console.log(thisId);
-         var inputText = document.getElementById("text-9am").value
+         var inputText = $("#text-9am").val()
          localStorage.setItem("input9am", inputText);
          break;
       case "btn-10am":
          console.log(thisId);
-         var inputText = document.getElementById("text-10am").value
+         var inputText = $("#text-10am").val()
          localStorage.setItem("input10am", inputText);
          break;
       case "btn-11am":
          console.log(thisId);
-         var inputText = document.getElementById("text-11am").value
+         var inputText = $("#text-11am").val()
          localStorage.setItem("input11am", inputText);
          break;
       case "btn-12pm":
          console.log(thisId);
-         var inputText = document.getElementById("text-12pm").value
+         var inputText = $("#text-12pm").val()
          localStorage.setItem("input12pm", inputText);
          break;
       case "btn-1pm":
          console.log(thisId);
-         var inputText = document.getElementById("text-1pm").value
+         var inputText = $("#text-1pm").val()
          localStorage.setItem("input1pm", inputText);
          break;
       case "btn-2pm":
          console.log(thisId);
-         var inputText = document.getElementById("text-2pm").value
+         var inputText = $("#text-2pm").val()
          localStorage.setItem("input2pm", inputText);
          break;
       case "btn-3pm":
          console.log(thisId);
-         var inputText = document.getElementById("text-3pm").value
+         var inputText = $("#text-3pm").val()
          localStorage.setItem("input3pm", inputText);
          break;
       case "btn-4pm":
          console.log(thisId);
-         var inputText = document.getElementById("text-4pm").value
+         var inputText = $("#text-4pm").val()
          localStorage.setItem("input4pm", inputText);
          break;
       case "btn-5pm":
          console.log(thisId);
-         var inputText = document.getElementById("text-5pm").value
+         var inputText = $("#text-5pm").val()
          localStorage.setItem("input5pm", inputText);
          break;
       default:
