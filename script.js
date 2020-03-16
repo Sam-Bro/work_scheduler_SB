@@ -59,7 +59,7 @@ function currentDayCheck() {
    }
 }
 
-
+//change textblock to grey when hour has passed
 function hoursPassed() {
    var currentHour = (moment().format("HH"));
    var currentHourCls = "text-" + (moment().format("ha"))
