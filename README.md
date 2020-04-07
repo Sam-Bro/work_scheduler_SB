@@ -16,3 +16,5 @@ A personal day planner has been recreated utilising the moment.js API and JQuery
 * on new day, local is cleared
 
 This projects purpose was to demonstrate the use of JQuery and third party APIs.
+
+https://sam-bro.github.io/work_scheduler_SB/ 
